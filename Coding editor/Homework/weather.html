@@ -14,9 +14,15 @@
       h1 {
         color: #1A64D6;
         font-weight: 600;
+        padding-bottom: 0;
       }
       .days {
         font-size: 16px;
+        padding: 10px;
+      }
+      .days:hover {
+        background-color: #FFFBEF;
+        margin: 0 40px 0 40px;
       }
       .button {
         background-color: #1A64D6;
@@ -30,33 +36,36 @@
         color: #1A64D6;
         border: 1px solid #1A64D6;
       }
+      .footer {
+        font-weight: 100;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="main-icon">🌤</div>
       <h1>Currently 21&deg; in Tokyo</h1>
-      <strong>13&deg; / 23&deg;</strong>
+      <h2>13&deg; / <strong>23&deg;</strong></h2>
       <br />
       <div class="days">
-        🌧Tomorrow
-        <div>10&deg; / 22&deg;</div>
+        🌧 <strong>Tomorrow</strong>
+        <div>10&deg; / <strong>22&deg;</strong> </div>
       </div>
       <br />
       <div class="days">
-        🌥Saturday
-        <div>15&deg; / 17&deg;</div>
+        🌥 Saturday
+        <div>15&deg; / <strong>17&deg;</strong></div>
       </div>
       <br />
       <div class="days">
-        ☀️Sunday
-        <div>25&deg; / 28&deg;</div>
+        ☀️ Sunday
+        <div>25&deg; / <strong>28&deg;</strong></div>
       </div>
       <br />
       <button class="button">Change city</button>
       <br />
       <br />
-      <div>Created by Nokhwezi P</div>
+      <div footer="footer">Created by Nokhwezi P</div>
     </div>
   </body>
 </html>
