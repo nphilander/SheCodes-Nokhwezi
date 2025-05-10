@@ -7,25 +7,35 @@
     <style>
       .container {
         text-align: center;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
       }
       .main-icon {
-        font-size: 30px;
+        font-size: 25px;
       }
-      h1 {
-        color: #1A64D6;
+      .content {
+        display: inline-block;
+        text-align: center; /* Ensures text inside .weather-block is centered */
+        width: max-content;
+      }
+      .content h1 {
+        color: #1a64d6;
         font-weight: 600;
-        padding-bottom: 0;
+      }
+      .main-temp {
+        margin: auto;
+        font-size: 25px;
       }
       .days {
         font-size: 16px;
-        padding: 10px;
+        padding: 30px 50px;
+        border-radius: 10px;
       }
+
       .days:hover {
-        background-color: #FFFBEF;
-        margin: 0 40px 0 40px;
+        background-color: #fffbef;
       }
       .button {
-        background-color: #1A64D6;
+        background-color: #1a64d6;
         color: #ffffff;
         padding: 20px;
         border-radius: 40px;
@@ -33,8 +43,8 @@
       }
       .button:hover {
         background: transparent;
-        color: #1A64D6;
-        border: 1px solid #1A64D6;
+        color: #1a64d6;
+        border: 1px solid #1a64d6;
       }
       .footer {
         font-weight: 100;
@@ -44,28 +54,31 @@
   <body>
     <div class="container">
       <div class="main-icon">🌤</div>
+      <div class="content">
       <h1>Currently 21&deg; in Tokyo</h1>
-      <h2>13&deg; / <strong>23&deg;</strong></h2>
+      <p class="main-temp">13&deg; / <strong>23&deg;</strong></p>
       <br />
       <div class="days">
-        🌧 <strong>Tomorrow</strong>
-        <div>10&deg; / <strong>22&deg;</strong> </div>
+        🌧 <strong>Tomorrow</strong> <br />
+        <span>10&deg; / <strong>22&deg;</strong></span>
       </div>
       <br />
       <div class="days">
-        🌥 Saturday
-        <div>15&deg; / <strong>17&deg;</strong></div>
+        🌥 <strong>Saturday</strong>
+        <br />
+        <span>15&deg; / <strong>17&deg;</strong></span>
       </div>
       <br />
       <div class="days">
-        ☀️ Sunday
-        <div>25&deg; / <strong>28&deg;</strong></div>
+        ☀️ <strong>Sunday</strong>
+        <br />
+        <span>25&deg; / <strong>28&deg;</strong></span>
+      </div>
       </div>
       <br />
       <button class="button">Change city</button>
       <br />
       <br />
-      <div footer="footer">Created by Nokhwezi P</div>
-    </div>
+      <div footer="footer">Code by Nokhwezi P </div>
   </body>
 </html>
