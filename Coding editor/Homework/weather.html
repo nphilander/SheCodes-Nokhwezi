@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Page</title>
     <style>
-      body {
-        transform: scale(0.9);
-        transform-origin: top center;
-      }
       .container {
         text-align: center;
-        font-family:Arial, Helvetica, sans-serif
+        font-family: Arial, Helvetica, sans-serif;
       }
       .main-icon {
         font-size: 25px;
       }
       .content {
         display: inline-block;
-        text-align: center; 
+        text-align: center;
         width: max-content;
       }
       .content h1 {
@@ -54,7 +50,7 @@
         border: 1px solid #1a64d6;
       }
       .footer {
-         font-weight: 100; 
+        font-weight: 100;
         color: #666666;
       }
     </style>
@@ -88,5 +84,23 @@
       <br />
       <div class="footer">Code by Nokhwezi Philander</div>
     </div>
+    <script>
+      function weather() {
+        let city = prompt("What is your city of residence?");
+        let degree = prompt("What is the temprature in your city");
+        let topIcon = document.querySelector(".main-icon");
+
+        if (degree > 0) {
+          topIcon.innerHTML = "😄";
+        } else topIcon.innerHTML = "☹️";
+
+        let heading = document.querySelector("h1");
+
+        heading.innerHTML = `Currently ${degree}&deg; in ${city}`;
+      }
+
+      let changeCity = document.querySelector("button");
+      changeCity.addEventListener("click", weather);
+    </script>
   </body>
 </html>
