@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANIME</title>
+    <title>😈 ANIME 😈</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        
       }
 
       body {
         font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
+        background: linear-gradient(90deg, #e791b1 0%, #9f78e3 100%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,7 +23,7 @@
       }
 
       .container {
-        background-color: white;
+        background-color: rgb(199, 174, 174);
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         padding: 30px;
@@ -33,7 +34,12 @@
 
       h1 {
         margin-bottom: 30px;
-        color: #333;
+        color: #083272;
+      }
+      .description {
+        border: 1px dashed #9c9552;
+        padding: 10px;
+        background-color: #ba91a0;
       }
 
       .gallery {
@@ -83,6 +89,19 @@
       .gallery-item:hover .caption {
         transform: translateY(0);
       }
+      .aot {
+        color: #e20404;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .pick-button {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 25px;
+      }
+      .pick-button:hover {
+        background-color: rgb(227, 165, 243);
+      }
       .footer {
         background-color: antiquewhite;
         margin-top: 20px;
@@ -90,38 +109,18 @@
     </style>
   </head>
   <body>
-    <!-- <div class="container">
-      <h1>I love Yogurt</h1>
-      <h2>Especially Greek Yogurt</h2>
-      <img
-        src="https://images.eatthismuch.com/site_media/img/254520_ldementhon_71b6a3e2-ec54-48c0-9ba3-73d8596244ae.png"
-        alt="Greek Yogurt"
-      />
-      <p>
-        Strained yogurt, Greek yogurt, yogurt cheese, or sack yoghurt is yogurt
-        that has been strained to remove most of its whey, resulting in a
-        thicker consistency than unstrained yogurt, while preserving yogurt's
-        distinctive sour taste.
-      </p>
-      <a
-        href="https://en.wikipedia.org/wiki/Strained_yogurt"
-        target="_blank"
-        class="learn-more"
-      >
-        Learn more on Wikipedia
-      </a>
-      <button class="buy-button">👉 Buy Greek Yogurt</button>
-      <p class="footer">
-        This page was built by
-        <a href="https://www.delac.io/" target="_blank"> Matt Delac </a>
-      </p>
-    </div> -->
     <div class="container">
-      <h1>ANIME</h1>
+      <h1>ANIME 🤌🏽🤌🏽🤌🏽</h1>
       <h2>What's your favourite anime from the gallery?</h2>
       <hr />
-      <em><p>There are thousands of availble anime online!</p></em>
+      <em><p>There are thousands of availble anime online today!</p></em>
+      <p class="description">
+        Did you know that it has been more than <strong>7 years</strong> since
+        <span class="aot">Attack on Titan</span> was released? It feels just
+        like yesteday when we watched history on our screens
+      </p>
       <hr />
+      <br />
       <div class="gallery">
         <div class="gallery-item">
           <img
@@ -171,17 +170,17 @@
 
         if (age > 17) {
           alert(
-            `Awesome stuff! ${name}, Just because you are ${age} doesnt mean you cant watch anime`
+            `Awesome stuff! ${name}, Just because you are ${age} doesnt mean you cant watch anime 😜`
           );
         } else {
           alert(
-            `Oops! Sorry ${name}. Seeing as you are ${age} old, you  might need some parental supervision to continue watching`
+            `Oops! Sorry ${name}. Seeing as you are ${age} old, you  might need some parental supervision to continue watching 🤔`
           );
         }
       }
 
-      let buyButton = document.querySelector(".buy-button");
-      buyButton.addEventListener("click", buy);
+      let button = document.querySelector(".pick-button");
+      button.addEventListener("click", pick);
     </script>
   </body>
 </html>
