@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming 🎮 - My Hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          122.3deg,
+          rgb(111, 71, 133) 14.6%,
+          rgb(232, 129, 166) 29.6%,
+          rgb(237, 237, 183) 42.1%,
+          rgb(244, 166, 215) 56.7%,
+          rgb(154, 219, 232) 68.7%,
+          rgb(238, 226, 159) 84.8%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .theme-button {
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        padding: 5px 8px;
+        border: 1px solid purple;
+        border-radius: 15px;
+      }
+      .theme-button:hover {
+        color: black;
+        background-color: white;
+      }
+      .game-image,
+      .game-image2,
+      .game-image3,
+      .game-image4,
+      .game-image5 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .game-image:hover {
+        filter: opacity(0.7);
+        transform: scale(1.4);
+      }
+      .game-image2:hover {
+        filter: contrast(80%);
+        transform: rotate(45deg);
+      }
+      .game-image3:hover {
+        filter: grayscale(80%);
+        transform: rotate(360deg);
+      }
+      .game-image4:hover {
+        filter: blur(50%);
+        transform: scaleX(2.1);
+      }
+      .game-image5:hover {
+        filter: brightness(30%);
+        transform: rotateX(360deg) scale(1.2);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 15px 0;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      button {
+        margin: 0 auto;
+        display: block;
+        font-size: 25px;
+        border: 1px solid blue;
+        border-radius: 15px;
+        padding: 10px;
+        transition: all 100ms ease-in-out;
+        font-size: 20px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: lightpink;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+        color: #ffffff;
+      }
+      .dark {
+        background: linear-gradient(to top, #09203f 0%, #537895 100%);
+        color: white;
+      }
+      .dark .container {
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(0, 0, 0, 0.15) 100%
+          ),
+          radial-gradient(
+            at top center,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(0, 0, 0, 0.4) 120%
+          );
+      }
+      .dark a {
+        color: magenta;
+      }
+      .link {
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="theme-button">Change Theme</button>
+      <h1>🎮🎮Gaming 🎮🎮</h1>
+      <h2>My favourite hobby</h2>
+      <a
+        href="https://www.playstation.com/en-za/games/the-last-of-us-part-ii-remastered/"
+        ><img
+          class="game-image"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/995/original/tlou.jpeg?1748644452"
+      /></a>
+      <div class="grid">
+        <img
+          class="game-image2"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/996/original/gow.jpeg?1748644462"
+        />
+        <img
+          class="game-image3"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/994/original/horizon.jpeg?1748644443"
+        />
+        <img
+          class="game-image4"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/993/original/jedi.jpeg?1748644433"
+        />
+        <img
+          class="game-image5"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/999/original/days-gone-review.jpg?1748647012"
+        />
+      </div>
+      <p>
+        Gaming on PS5 delivers a next-gen experience with ultra-fast SSD
+        loading, stunning 4K 120Hz visuals, and the immersive DualSense
+        controller featuring haptic feedback and adaptive triggers. Enhanced by
+        3D audio and exclusive blockbuster titles like *Spider-Man 2* and God of
+        War Ragnarök, the PS5 offers seamless backward compatibility with PS4
+        games, making it a powerhouse for high-performance, responsive, and
+        deeply engaging gameplay. 🎮✨
+      </p>
+      <p class="link">
+        <a href="https://www.playstation.com/en-za/ps5/games/"
+          >See more games</a
+        >
+      </p>
+
+      <button class="submit-button">Leave Details</button>
+    </div>
+
+    <footer>
+      Coded by
+      <a
+        href="https://github.com/nphilander/SheCodes-Nokhwezi/tree/main"
+        target="_blank"
+        >Nokhwezi Philander</a
+      >
+      using HTML, CSS and Javascript
+    </footer>
+    <script>
+      function changeTheme() {
+        let theme = document.querySelector("body");
+
+        if (theme.classList.contains("dark")) {
+          theme.classList.remove("dark");
+        } else theme.classList.add("dark");
+      }
+      function message() {
+        let name = prompt("Enter your name");
+        let age = prompt("Enter your age");
+
+        if (age < 18) {
+          alert(
+            "Please ask an adult to help you with playing any of these games"
+          );
+        } else {
+          alert(
+            `Awesome stuff ${name}! You can check out more games on see more link`
+          );
+        }
+      }
+
+      let button = document.querySelector(".theme-button");
+      button.addEventListener("click", changeTheme);
+
+      let submit = document.querySelector(".submit-button");
+      submit.addEventListener("click", message);
+    </script>
+  </body>
+</html>
