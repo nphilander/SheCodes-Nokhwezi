@@ -34,11 +34,19 @@ function handleKeyPress(event) {
 function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
   let city = response.data.city;
+  let humidity = response.data.temperature.humidity;
+  let windSpeed = response.data.wind.speed;
+  let condition = response.data.condition.description;
 
   let tempElement = document.querySelector(".temp");
-  tempElement.innerHTML = `☀️ ${temperature}&deg C`;
+  tempElement.innerHTML = `☀️ ${temperature}&deg;C`;
 
   cityDisplay.textContent = city;
+
+  currentWeatherInfo.innerHTML = `
+    ${updateCurrentDate()}, ${condition} <br />
+    Humidity: <strong>${humidity}%</strong> Wind: <strong>${windSpeed}km/h</strong>
+  `;
 }
 
 function findCity(city) {
@@ -51,11 +59,6 @@ let cityDisplay = document.querySelector(".current-weather h1");
 let searchInput = document.querySelector(".search-input");
 let searchButton = document.querySelector(".search-button");
 let apiKey = "ob2cf76b441t303bab3624054158f86a";
-
-currentWeatherInfo.innerHTML = `
-    ${updateCurrentDate()}, slightly cloudy <br />
-    Humidity: <strong>67%</strong> Wind: <strong>6.1km/h</strong>
-  `;
 
 searchButton.addEventListener("click", handleSearch);
 searchInput.addEventListener("keypress", handleKeyPress);
